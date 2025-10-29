@@ -119,7 +119,7 @@ const createKYCApplication = async (req, res) => {
 
   try {
     await connection.beginTransaction();
-
+    console.log('Creating KYC application with data:', Number(req.body.userId));
     const {
       userId,
       documentType,
